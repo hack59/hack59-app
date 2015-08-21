@@ -14,6 +14,7 @@
 		C1DA5E551B86F89100541312 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1DA5E541B86F89100541312 /* Images.xcassets */; };
 		C1DA5E581B86F89100541312 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1DA5E561B86F89100541312 /* LaunchScreen.xib */; };
 		C1DA5E641B86F89100541312 /* HackNTUTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DA5E631B86F89100541312 /* HackNTUTests.m */; };
+		DEE134EF8560AC05BAD0E21A /* libPods-HackNTU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E356D1E5CD40EC8C638E6F1 /* libPods-HackNTU.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2850D6D60BED0E00E7FAF3B8 /* Pods-HackNTU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackNTU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackNTU/Pods-HackNTU.debug.xcconfig"; sourceTree = "<group>"; };
+		3E356D1E5CD40EC8C638E6F1 /* libPods-HackNTU.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackNTU.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48A3F2F3CD39399E20497DD6 /* Pods-HackNTU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackNTU.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackNTU/Pods-HackNTU.release.xcconfig"; sourceTree = "<group>"; };
 		C1DA5E441B86F89100541312 /* HackNTU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackNTU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DA5E481B86F89100541312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1DA5E491B86F89100541312 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE134EF8560AC05BAD0E21A /* libPods-HackNTU.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4170EC5C59E9E1EBD355283E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2850D6D60BED0E00E7FAF3B8 /* Pods-HackNTU.debug.xcconfig */,
+				48A3F2F3CD39399E20497DD6 /* Pods-HackNTU.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC2DE089BFB5E9D6C267A731 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E356D1E5CD40EC8C638E6F1 /* libPods-HackNTU.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1DA5E3B1B86F89000541312 = {
 			isa = PBXGroup;
 			children = (
 				C1DA5E461B86F89100541312 /* HackNTU */,
 				C1DA5E601B86F89100541312 /* HackNTUTests */,
 				C1DA5E451B86F89100541312 /* Products */,
+				4170EC5C59E9E1EBD355283E /* Pods */,
+				AC2DE089BFB5E9D6C267A731 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1DA5E671B86F89100541312 /* Build configuration list for PBXNativeTarget "HackNTU" */;
 			buildPhases = (
+				3DBBCEAB3AF848FBD5504A34 /* Check Pods Manifest.lock */,
 				C1DA5E401B86F89100541312 /* Sources */,
 				C1DA5E411B86F89100541312 /* Frameworks */,
 				C1DA5E421B86F89100541312 /* Resources */,
+				B855AC0B3620D9D8C9031767 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DBBCEAB3AF848FBD5504A34 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B855AC0B3620D9D8C9031767 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackNTU/Pods-HackNTU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1DA5E401B86F89100541312 /* Sources */ = {
@@ -345,6 +404,7 @@
 		};
 		C1DA5E681B86F89100541312 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2850D6D60BED0E00E7FAF3B8 /* Pods-HackNTU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HackNTU/Info.plist;
@@ -355,6 +415,7 @@
 		};
 		C1DA5E691B86F89100541312 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A3F2F3CD39399E20497DD6 /* Pods-HackNTU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HackNTU/Info.plist;
@@ -416,6 +477,7 @@
 				C1DA5E691B86F89100541312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1DA5E6A1B86F89100541312 /* Build configuration list for PBXNativeTarget "HackNTUTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +486,7 @@
 				C1DA5E6C1B86F89100541312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
