@@ -79,7 +79,7 @@
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if ([keyPath isEqual:@"myLoction"] && [object isKindOfClass:[GMSMapView class]]) {
+    if ([keyPath isEqualToString:@"myLocation"] && [object isKindOfClass:[GMSMapView class]]) {
         if (self.isFirstTimeGetMyLocation) {
             [mapView animateToCameraPosition:[GMSCameraPosition cameraWithLatitude:mapView.myLocation.coordinate.latitude longitude:mapView.myLocation.coordinate.longitude zoom:15]];
             self.isFirstTimeGetMyLocation = NO;
