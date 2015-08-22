@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 
-@interface SubmitVC : UIViewController <UIGestureRecognizerDelegate>
+@interface SubmitVC : UIViewController <UIGestureRecognizerDelegate, UITextViewDelegate>
 
 @end

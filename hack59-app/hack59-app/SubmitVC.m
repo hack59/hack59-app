@@ -47,6 +47,31 @@
     }
 }
 
+#pragma mark - TextView
+- (void)textViewPlaceholder
+{
+    UITextView *myUITextView = [[UITextView alloc] init];
+    myUITextView.delegate = self;
+    myUITextView.text = @"你要為城市靠北什麼呢？";
+    myUITextView.textColor = [UIColor lightGrayColor];
+}
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"你要為城市靠北什麼呢？"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor blackColor];
+    }
+    [textView becomeFirstResponder];
+}
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"你要為城市靠北什麼呢？"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor lightGrayColor];
+    }
+    [textView resignFirstResponder];
+}
 
 #pragma mark - 隱藏鍵盤
 - (void)readyHideKeyboard
