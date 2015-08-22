@@ -14,6 +14,9 @@
 		C13D12EE1B87069F00A14C1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13D12ED1B87069F00A14C1E /* Images.xcassets */; };
 		C13D12F11B87069F00A14C1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13D12EF1B87069F00A14C1E /* LaunchScreen.xib */; };
 		C13D12FD1B8706A000A14C1E /* hack59_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C13D12FC1B8706A000A14C1E /* hack59_appTests.m */; };
+		C192F87C1B8718D300A1067C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C192F87B1B8718D300A1067C /* MapKit.framework */; };
+		C1A303771B8758D100905C48 /* AddButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1A303761B8758D100905C48 /* AddButton.xib */; };
+		C1A3037A1B87742E00905C48 /* AddButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A303791B87742E00905C48 /* AddButton.m */; };
 		DA868DDFEF28042424B44490 /* libPods-hack59-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B237AE67751F60F3CC3031 /* libPods-hack59-app.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,10 @@
 		C13D12F61B8706A000A14C1E /* hack59-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hack59-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13D12FB1B8706A000A14C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C13D12FC1B8706A000A14C1E /* hack59_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hack59_appTests.m; sourceTree = "<group>"; };
+		C192F87B1B8718D300A1067C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C1A303761B8758D100905C48 /* AddButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddButton.xib; sourceTree = "<group>"; };
+		C1A303781B87742E00905C48 /* AddButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddButton.h; sourceTree = "<group>"; };
+		C1A303791B87742E00905C48 /* AddButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddButton.m; sourceTree = "<group>"; };
 		D630159953E578849A2BF318 /* Pods-hack59-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack59-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-hack59-app/Pods-hack59-app.release.xcconfig"; sourceTree = "<group>"; };
 		F9BA6EB962E322EF47CA1D7A /* Pods-hack59-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack59-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hack59-app/Pods-hack59-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C192F87C1B8718D300A1067C /* MapKit.framework in Frameworks */,
 				DA868DDFEF28042424B44490 /* libPods-hack59-app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +100,9 @@
 				C13D12E51B87069F00A14C1E /* AppDelegate.m */,
 				C13D12E71B87069F00A14C1E /* ViewController.h */,
 				C13D12E81B87069F00A14C1E /* ViewController.m */,
+				C1A303781B87742E00905C48 /* AddButton.h */,
+				C1A303791B87742E00905C48 /* AddButton.m */,
+				C1A303761B8758D100905C48 /* AddButton.xib */,
 				C13D12EA1B87069F00A14C1E /* Main.storyboard */,
 				C13D12ED1B87069F00A14C1E /* Images.xcassets */,
 				C13D12EF1B87069F00A14C1E /* LaunchScreen.xib */,
@@ -138,6 +149,7 @@
 		DE78C282361DC6FCF9E833A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C192F87B1B8718D300A1067C /* MapKit.framework */,
 				68B237AE67751F60F3CC3031 /* libPods-hack59-app.a */,
 			);
 			name = Frameworks;
@@ -194,6 +206,11 @@
 				TargetAttributes = {
 					C13D12DC1B87069F00A14C1E = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					C13D12F51B8706A000A14C1E = {
 						CreatedOnToolsVersion = 6.4;
@@ -228,6 +245,7 @@
 				C13D12EC1B87069F00A14C1E /* Main.storyboard in Resources */,
 				C13D12F11B87069F00A14C1E /* LaunchScreen.xib in Resources */,
 				C13D12EE1B87069F00A14C1E /* Images.xcassets in Resources */,
+				C1A303771B8758D100905C48 /* AddButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +299,7 @@
 				C13D12E91B87069F00A14C1E /* ViewController.m in Sources */,
 				C13D12E61B87069F00A14C1E /* AppDelegate.m in Sources */,
 				C13D12E31B87069F00A14C1E /* main.m in Sources */,
+				C1A3037A1B87742E00905C48 /* AddButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,9 +377,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -395,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
