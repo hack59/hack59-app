@@ -44,9 +44,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwf-Rv-nLR">
-                                <rect key="frame" x="0.0" y="44" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family=".Helvetica Neue DeskInterface" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -54,8 +54,8 @@
                         <constraints>
                             <constraint firstItem="Nwf-Rv-nLR" firstAttribute="leading" secondItem="RkG-ew-Vr7" secondAttribute="leading" id="5DD-HV-Eb0"/>
                             <constraint firstAttribute="trailing" secondItem="Nwf-Rv-nLR" secondAttribute="trailing" id="L7x-iC-13e"/>
-                            <constraint firstItem="Nwf-Rv-nLR" firstAttribute="top" secondItem="MYU-xz-D2E" secondAttribute="bottom" id="U3A-gu-99P"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Nwf-Rv-nLR" secondAttribute="bottom" constant="-44" id="kCS-jP-CSC"/>
+                            <constraint firstItem="Nwf-Rv-nLR" firstAttribute="top" secondItem="MYU-xz-D2E" secondAttribute="bottom" constant="-44" id="U3A-gu-99P"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Nwf-Rv-nLR" secondAttribute="bottom" id="kCS-jP-CSC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="投稿" id="2Ov-gQ-ajg">

@@ -23,7 +23,7 @@
 
 #pragma mark - Finish Submit
 - (IBAction)finishSubmit:(id)sender {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
