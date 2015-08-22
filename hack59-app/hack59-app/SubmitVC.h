@@ -10,5 +10,6 @@
 #import "ViewController.h"
 
 @interface SubmitVC : UIViewController <UIGestureRecognizerDelegate, UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end

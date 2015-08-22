@@ -18,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self readyHideKeyboard];
+    [self textViewPlaceholder];
 }
-
 
 #pragma mark - Finish Submit
 - (IBAction)finishSubmit:(id)sender {
@@ -50,27 +50,26 @@
 #pragma mark - TextView
 - (void)textViewPlaceholder
 {
-    UITextView *myUITextView = [[UITextView alloc] init];
-    myUITextView.delegate = self;
-    myUITextView.text = @"你要為城市靠北什麼呢？";
-    myUITextView.textColor = [UIColor lightGrayColor];
+    _textView.delegate = self;
+    _textView.text = @"你要為城市靠北什麼呢？";
+    _textView.textColor = [UIColor lightGrayColor];
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    if ([textView.text isEqualToString:@"你要為城市靠北什麼呢？"]) {
-        textView.text = @"";
-        textView.textColor = [UIColor blackColor];
+    if ([_textView.text isEqualToString:@"你要為城市靠北什麼呢？"]) {
+        _textView.text = @"";
+        _textView.textColor = [UIColor blackColor];
     }
-    [textView becomeFirstResponder];
+    [_textView becomeFirstResponder];
 }
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
-    if ([textView.text isEqualToString:@"你要為城市靠北什麼呢？"]) {
-        textView.text = @"";
-        textView.textColor = [UIColor lightGrayColor];
+    if ([_textView.text isEqualToString:@""]) {
+        _textView.text = @"你要為城市靠北什麼呢？";
+        _textView.textColor = [UIColor lightGrayColor];
     }
-    [textView resignFirstResponder];
+    [_textView resignFirstResponder];
 }
 
 #pragma mark - 隱藏鍵盤
@@ -85,16 +84,5 @@ UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] init
 {
     [self.view endEditing:YES];
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
