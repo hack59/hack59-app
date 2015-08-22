@@ -22,7 +22,8 @@
 }
 
 #pragma mark - Finish Submit
-- (IBAction)finishSubmit:(id)sender {
+- (IBAction)finishSubmit:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -30,7 +31,7 @@
 #pragma mark - Cancel Submit
 - (IBAction)dismissSubmitView:(id)sender
 {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"尚未完成投稿，確定離開嗎？" message:nil delegate:self cancelButtonTitle:@"確定" otherButtonTitles:@"取消", nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"尚未完成投稿，確定離開嗎？" message:nil delegate:self cancelButtonTitle:@"確定" otherButtonTitles:@"取消", nil];    
 
     [alert show];
 }
