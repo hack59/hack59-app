@@ -26,10 +26,40 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="4Cj-d0-QxY" kind="push" identifier="SegueIdentifier" id="RDz-9F-n5v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1225" y="337"/>
+        </scene>
+        <!--Content TableVC-->
+        <scene sceneID="hJo-Xc-29g">
+            <objects>
+                <tableViewController id="4Cj-d0-QxY" customClass="ContentTableVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QTt-3Y-Xq1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tGO-0y-uGN">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tGO-0y-uGN" id="Pil-Bg-bSP">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Cj-d0-QxY" id="ykl-LN-JTr"/>
+                            <outlet property="delegate" destination="4Cj-d0-QxY" id="JLu-g8-pA9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="TmF-OU-tLl"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HwV-Da-4PT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1877" y="337"/>
         </scene>
         <!--投稿-->
         <scene sceneID="4vq-ax-Miq">

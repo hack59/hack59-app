@@ -45,6 +45,13 @@
     mapView.settings.myLocationButton = YES;
     mapView.settings.compassButton = YES;
     self.view = mapView;
+
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.position = CLLocationCoordinate2DMake(25.021625, 121.534423);
+    marker.title = @"台大體育館前公車站";
+    marker.snippet = @"公車很難等";
+    marker.draggable = YES;
+    marker.map = mapView;
 }
 
 
@@ -57,6 +64,14 @@
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(mapView.myLocation.coordinate.latitude, mapView.myLocation.coordinate.longitude);
     marker.map = mapView;
+}
+
+
+#pragma mark - Tappe info Window
+- (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker
+{
+    NSLog(@"info window Tapped");
+    [self performSegueWithIdentifier:@"SegueIdentifier" sender:self];
 }
 
 /*
