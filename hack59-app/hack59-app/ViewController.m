@@ -49,10 +49,9 @@
 
 
 #pragma mark - Create Markers
-- (IBAction)addEventOnMap:(id)sender {
-    [self createMarker];
-}
-
+//- (IBAction)addEventOnMap:(id)sender {
+//    [self createMarker];
+//}
 -(void)createMarker
 {
     GMSMarker *marker = [[GMSMarker alloc] init];
