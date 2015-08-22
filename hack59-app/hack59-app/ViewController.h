@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "AddButton.h"
 @interface ViewController : UIViewController
-
+-(void)createMarker;
 @end

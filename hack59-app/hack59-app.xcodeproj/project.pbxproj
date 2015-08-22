@@ -17,6 +17,7 @@
 		C192F87C1B8718D300A1067C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C192F87B1B8718D300A1067C /* MapKit.framework */; };
 		C1A303771B8758D100905C48 /* AddButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1A303761B8758D100905C48 /* AddButton.xib */; };
 		C1A3037A1B87742E00905C48 /* AddButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A303791B87742E00905C48 /* AddButton.m */; };
+		C1A3037D1B882F9800905C48 /* SubmitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A3037C1B882F9800905C48 /* SubmitVC.m */; };
 		DA868DDFEF28042424B44490 /* libPods-hack59-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B237AE67751F60F3CC3031 /* libPods-hack59-app.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,8 @@
 		C1A303761B8758D100905C48 /* AddButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddButton.xib; sourceTree = "<group>"; };
 		C1A303781B87742E00905C48 /* AddButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddButton.h; sourceTree = "<group>"; };
 		C1A303791B87742E00905C48 /* AddButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddButton.m; sourceTree = "<group>"; };
+		C1A3037B1B882F9800905C48 /* SubmitVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitVC.h; sourceTree = "<group>"; };
+		C1A3037C1B882F9800905C48 /* SubmitVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitVC.m; sourceTree = "<group>"; };
 		D630159953E578849A2BF318 /* Pods-hack59-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack59-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-hack59-app/Pods-hack59-app.release.xcconfig"; sourceTree = "<group>"; };
 		F9BA6EB962E322EF47CA1D7A /* Pods-hack59-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hack59-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hack59-app/Pods-hack59-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,10 +103,11 @@
 				C13D12E51B87069F00A14C1E /* AppDelegate.m */,
 				C13D12E71B87069F00A14C1E /* ViewController.h */,
 				C13D12E81B87069F00A14C1E /* ViewController.m */,
+				C13D12EA1B87069F00A14C1E /* Main.storyboard */,
 				C1A303781B87742E00905C48 /* AddButton.h */,
 				C1A303791B87742E00905C48 /* AddButton.m */,
 				C1A303761B8758D100905C48 /* AddButton.xib */,
-				C13D12EA1B87069F00A14C1E /* Main.storyboard */,
+				C1A3037E1B882FA300905C48 /* Submit */,
 				C13D12ED1B87069F00A14C1E /* Images.xcassets */,
 				C13D12EF1B87069F00A14C1E /* LaunchScreen.xib */,
 				C13D12E01B87069F00A14C1E /* Supporting Files */,
@@ -135,6 +139,15 @@
 				C13D12FB1B8706A000A14C1E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1A3037E1B882FA300905C48 /* Submit */ = {
+			isa = PBXGroup;
+			children = (
+				C1A3037B1B882F9800905C48 /* SubmitVC.h */,
+				C1A3037C1B882F9800905C48 /* SubmitVC.m */,
+			);
+			name = Submit;
 			sourceTree = "<group>";
 		};
 		CCBB0E02901A92131A5603A6 /* Pods */ = {
@@ -297,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13D12E91B87069F00A14C1E /* ViewController.m in Sources */,
+				C1A3037D1B882F9800905C48 /* SubmitVC.m in Sources */,
 				C13D12E61B87069F00A14C1E /* AppDelegate.m in Sources */,
 				C13D12E31B87069F00A14C1E /* main.m in Sources */,
 				C1A3037A1B87742E00905C48 /* AddButton.m in Sources */,

@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XC9-Ih-Kww">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hack59-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -17,17 +18,62 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bW5-Q2-2aa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kzm-Mn-csl">
+                    <navigationItem key="navigationItem" title="Hack59" id="bW5-Q2-2aa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="kzm-Mn-csl">
                             <connections>
                                 <action selector="addEventOnMap:" destination="vXZ-lx-hvc" id="3PY-GR-Vcg"/>
+                                <segue destination="1Mn-fJ-Msf" kind="modal" modalPresentationStyle="pageSheet" id="ZnF-GN-wpi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="337"/>
+            <point key="canvasLocation" x="1225" y="337"/>
+        </scene>
+        <!--投稿-->
+        <scene sceneID="4vq-ax-Miq">
+            <objects>
+                <viewController id="cH1-Ar-SHa" customClass="SubmitVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MYU-xz-D2E"/>
+                        <viewControllerLayoutGuide type="bottom" id="7uj-ce-Kb3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RkG-ew-Vr7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwf-Rv-nLR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family=".Helvetica Neue DeskInterface" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nwf-Rv-nLR" firstAttribute="leading" secondItem="RkG-ew-Vr7" secondAttribute="leading" id="5DD-HV-Eb0"/>
+                            <constraint firstAttribute="trailing" secondItem="Nwf-Rv-nLR" secondAttribute="trailing" id="L7x-iC-13e"/>
+                            <constraint firstItem="Nwf-Rv-nLR" firstAttribute="top" secondItem="MYU-xz-D2E" secondAttribute="bottom" constant="-44" id="U3A-gu-99P"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Nwf-Rv-nLR" secondAttribute="bottom" id="kCS-jP-CSC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="投稿" id="2Ov-gQ-ajg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="N9c-T4-aXt">
+                            <connections>
+                                <action selector="dismissSubmitView:" destination="cH1-Ar-SHa" id="vCP-ll-PYz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="3So-xw-XzG">
+                            <connections>
+                                <action selector="finishSubmit:" destination="cH1-Ar-SHa" id="kq0-lW-bt7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDR-gg-9Mt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="1086"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nFl-T5-iI9">
@@ -46,6 +92,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCP-jb-ncl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="549" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YvW-rb-gig">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Mn-fJ-Msf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="70b-Nu-bPM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cH1-Ar-SHa" kind="relationship" relationship="rootViewController" id="aaz-rn-DrN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aq-Cl-gOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="1086"/>
         </scene>
     </scenes>
 </document>
