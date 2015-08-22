@@ -40,6 +40,7 @@ PODS:
   - FBSDKShareKit (4.5.1):
     - FBSDKCoreKit
   - GoogleMaps (1.10.1)
+  - MBProgressHUD (0.9.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - GoogleMaps
+  - MBProgressHUD (~> 0.8)
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
@@ -55,5 +57,6 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 225cc9a388a92916ee3f3bb14422017b6e44b65b
   FBSDKShareKit: 642034ac9f30793dfd897851b724bb4281750266
   GoogleMaps: ebf08677f181d9c2dcdbd1721d206f02beccc9b1
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
 
 COCOAPODS: 0.38.2

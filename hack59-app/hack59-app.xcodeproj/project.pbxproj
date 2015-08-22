@@ -107,9 +107,7 @@
 				C13D12E71B87069F00A14C1E /* ViewController.h */,
 				C13D12E81B87069F00A14C1E /* ViewController.m */,
 				C13D12EA1B87069F00A14C1E /* Main.storyboard */,
-				C1A303781B87742E00905C48 /* AddButton.h */,
-				C1A303791B87742E00905C48 /* AddButton.m */,
-				C1A303761B8758D100905C48 /* AddButton.xib */,
+				C1A303831B889E7800905C48 /* AddButton */,
 				C1A3037E1B882FA300905C48 /* Submit */,
 				C1A303821B88913100905C48 /* Content */,
 				C13D12ED1B87069F00A14C1E /* Images.xcassets */,
@@ -161,6 +159,16 @@
 				C1A303801B88912600905C48 /* ContentTableVC.m */,
 			);
 			name = Content;
+			sourceTree = "<group>";
+		};
+		C1A303831B889E7800905C48 /* AddButton */ = {
+			isa = PBXGroup;
+			children = (
+				C1A303781B87742E00905C48 /* AddButton.h */,
+				C1A303791B87742E00905C48 /* AddButton.m */,
+				C1A303761B8758D100905C48 /* AddButton.xib */,
+			);
+			name = AddButton;
 			sourceTree = "<group>";
 		};
 		CCBB0E02901A92131A5603A6 /* Pods */ = {
