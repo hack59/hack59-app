@@ -31,37 +31,24 @@
 //    [self.addButton addSubview:mapView];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [mapView addObserver:self forKeyPath:@"myLocation" options:NSKeyValueObservingOptionNew context:nil];
-}
 
-#pragma mark - GOOGLE_MAP
+
+#pragma mark - Google Map
 - (void)mapViewDidLoad
 {
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:mapView.myLocation.coordinate.latitude
                                                             longitude:mapView.myLocation.coordinate.longitude
-                                                                 zoom:8];
+                                                                 zoom:15];
     mapView = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
     mapView.myLocationEnabled = YES;
     mapView.delegate = self;
     mapView.settings.myLocationButton = YES;
     mapView.settings.compassButton = YES;
     self.view = mapView;
-
-    // Creates a marker in the center of the map.
-//    GMSMarker *marker = [[GMSMarker alloc] init];
-//    marker.position = CLLocationCoordinate2DMake(25.021759, 121.535269);
-//    marker.title = @"HackNTU";
-//    marker.snippet = @"媽!我上電視了!!";
-//    marker.map = mapView;
 }
 
-- (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker
-{
 
-}
+#pragma mark - Create Markers
 - (IBAction)addEventOnMap:(id)sender {
     [self createMarker];
 }
@@ -73,22 +60,8 @@
     marker.map = mapView;
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqual:@"myLoction"] && [object isKindOfClass:[GMSMapView class]]) {
-        if (self.isFirstTimeGetMyLocation) {
-            [mapView animateToCameraPosition:[GMSCameraPosition cameraWithLatitude:mapView.myLocation.coordinate.latitude longitude:mapView.myLocation.coordinate.longitude zoom:8]];
-            self.isFirstTimeGetMyLocation = NO;
-        }
-    }
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [mapView removeObserver:self forKeyPath:@"myLocation"];
-}
-
+/*
+#pragma mark - Add Button
 - (UIView *)addButton
 {
     if (!self.addButton) {
@@ -97,6 +70,26 @@
     }
     return self.addButton;
 }
+*/
 
-
+#pragma mark - Observe User Location
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [mapView addObserver:self forKeyPath:@"myLocation" options:NSKeyValueObservingOptionNew context:nil];
+}
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqual:@"myLoction"] && [object isKindOfClass:[GMSMapView class]]) {
+        if (self.isFirstTimeGetMyLocation) {
+            [mapView animateToCameraPosition:[GMSCameraPosition cameraWithLatitude:mapView.myLocation.coordinate.latitude longitude:mapView.myLocation.coordinate.longitude zoom:15]];
+            self.isFirstTimeGetMyLocation = NO;
+        }
+    }
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [mapView removeObserver:self forKeyPath:@"myLocation"];
+}
 @end
