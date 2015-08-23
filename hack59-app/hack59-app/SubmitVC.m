@@ -8,6 +8,7 @@
 
 #import "SubmitVC.h"
 #import "ViewController.h"
+#import "MBProgressHUD.h"
 
 @interface SubmitVC ()
 
@@ -24,7 +25,14 @@
 #pragma mark - Finish Submit
 - (IBAction)finishSubmit:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        // Do something...
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+        [self dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 

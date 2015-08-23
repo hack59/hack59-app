@@ -51,7 +51,24 @@
     marker.title = @"HACK INTO THE CITY";
     marker.snippet = @"HackNTU";
     marker.draggable = YES;
+    marker.icon = [UIImage imageNamed:@"marker"];
     marker.map = mapView;
+
+    GMSMarker *marker2 = [[GMSMarker alloc] init];
+    marker2.position = CLLocationCoordinate2DMake(25.0144121, 121.5350465);
+    marker2.title = @"這裏還有好多樹要清理喔";
+    marker2.snippet = @"捷運公館站";
+    marker2.draggable = YES;
+    marker2.icon = [UIImage imageNamed:@"marker"];
+    marker2.map = mapView;
+
+    GMSMarker *marker3 = [[GMSMarker alloc] init];
+    marker3.position = CLLocationCoordinate2DMake(25.0173263, 121.5386983);
+    marker3.title = @"媽!我在這!!";
+    marker3.snippet = @"臺灣大學";
+    marker3.draggable = YES;
+    marker3.icon = [UIImage imageNamed:@"marker"];
+    marker3.map = mapView;
 }
 
 

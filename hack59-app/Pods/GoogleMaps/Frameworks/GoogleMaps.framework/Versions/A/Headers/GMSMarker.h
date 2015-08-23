@@ -144,7 +144,7 @@ typedef enum {
  */
 FOUNDATION_EXTERN const CGPoint kGMSMarkerDefaultGroundAnchor;
 
-/**
+/** 
  * The default position of the info window anchor of a GMSMarker: the center top
  * point of the marker icon.
  */
