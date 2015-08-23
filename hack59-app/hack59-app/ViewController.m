@@ -48,8 +48,8 @@
 
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(25.021625, 121.534423);
-    marker.title = @"台大體育館前公車站";
-    marker.snippet = @"公車很難等";
+    marker.title = @"HACK INTO THE CITY";
+    marker.snippet = @"HackNTU";
     marker.draggable = YES;
     marker.map = mapView;
 }

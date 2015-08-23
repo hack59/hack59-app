@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLKTextViewController.h"
 
 @interface ContentTableVC : UITableViewController
 
